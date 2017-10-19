@@ -3,13 +3,7 @@ import random
 
 client = discord.Client()
 
-
-@client.event
-async def on_message(message):
-    ismarvin = message.content.startswith("!marvin")
-    print(ismarvin)
-    if ismarvin:
-        quotes = ["The build failed, your project could not be tested.",
+quotes = ["The build failed, your project could not be tested.",
                   "Test failed, invalid output.",
                   "Task01 : FAILURE",
                   "# Got:\n\n# But expected:\n^?ELF^B^A^A^@^@^@^@^@^@^@^@^@^C^@>^@^A^@^@^@M-p^F^@^@^@^@^@^@@^@^@^@^@^@^@^@M-^X^"
@@ -22,8 +16,17 @@ async def on_message(message):
                   "# Got:\n-rw-rw-r-- 1  0  test01\n-rwxrwxr-x 1 13  test02\nlrwxrwxrwx 1  6  test03 -> test02\n# But expected:\n-rw-rw-r-- 1  0  test01\n-rwxrwxr-x 1 12  test02\nlrwxrwxrwx 1  6  test03 -> test02",
                   "# Executing all tests...\n# Test crashed (SIGPIPE)",
                   "# Task file not found."]
+
+@client.event
+async def on_message(message):
+    ismarvin = message.content.startswith("!marvin")
+    iscode = "```" in message.content
+    chance = [0, 1, 2, 3]
+    if ismarvin:
         choice = random.choice(quotes)
-        print(choice)
+        await client.send_message(message.channel, choice)
+    elif iscode and not random.choice(chance):
+        choice = random.choice(quotes)
         await client.send_message(message.channel, choice)
 
 
