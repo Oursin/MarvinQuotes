@@ -16,8 +16,8 @@ quotes = ["The build failed, your project could not be tested.",
           "# Got:\n-rw-rw-r-- 1  0  test01\n-rwxrwxr-x 1 13  test02\nlrwxrwxrwx 1  6  test03 -> test02\n# But expected:\n-rw-rw-r-- 1  0  test01\n-rwxrwxr-x 1 12  test02\nlrwxrwxrwx 1  6  test03 -> test02",
           "# Executing all tests...\n# Test crashed (SIGPIPE)",
           "# Task file not found.",
-          "# Got:\n\nReturn value: 84\n# But expected:\nReturn value: 84\n"]
-
+          "# Got:\n\nReturn value: 84\n# But expected:\nReturn value: 84\n",
+          "mam google"]
 
 @client.event
 async def on_message(message):
