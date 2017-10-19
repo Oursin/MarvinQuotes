@@ -17,7 +17,7 @@ quotes = ["The build failed, your project could not be tested.",
           "# Executing all tests...\n# Test crashed (SIGPIPE)",
           "# Task file not found.",
           "# Got:\n\nReturn value: 84\n# But expected:\nReturn value: 84\n",
-          "mam google",
+          "man google",
           "passed: 0.0 %"]
 
 @client.event
