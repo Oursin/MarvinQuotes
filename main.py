@@ -27,7 +27,7 @@ async def on_message(message):
     if ismarvin:
         choice = random.choice(quotes)
         await client.send_message(message.channel, choice)
-    elif iscode and "printf" in message.content:
+    elif "printf" in message.content:
         await client.send_message(message.channel, quotes[6])
     elif iscode and not random.choice(chance):
         choice = random.choice(quotes)
