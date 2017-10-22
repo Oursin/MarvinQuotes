@@ -30,7 +30,7 @@ async def on_message(message):
         await client.send_message(message.channel, choice)
     elif "printf" in message.content and message.author != client.user:
         await client.send_message(message.channel, quotes[5])
-    elif iscode and not random.choice(chance):
+    elif iscode and not message.author.bot:
         choice = random.choice(quotes)
         await client.send_message(message.channel, choice)
 
