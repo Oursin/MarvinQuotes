@@ -25,8 +25,7 @@ quotes = ["The build failed, your project could not be tested.",
 @client.event
 async def on_message(message):
     ismarvin = message.content.startswith("!marvin")
-    iscode = "```" in message.content
-    chance = [0, 1, 2, 3]
+    iscode = "```C" in message.content
     if ismarvin:
         choice = random.choice(quotes)
         await client.send_message(message.channel, choice)
