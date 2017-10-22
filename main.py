@@ -19,7 +19,8 @@ quotes = ["The build failed, your project could not be tested.",
           "# Got:\n\nReturn value: 84\n# But expected:\nReturn value: 84\n",
           "man google",
           "passed: 0.0 %",
-          "# Got:\n1, 2, 3, 4, 5, 7\n#But expected:\n1, 2, 3, 4, 5, 6"]
+          "# Got:\n1, 2, 3, 4, 5, 7\n#But expected:\n1, 2, 3, 4, 5, 6",
+          "# Got:\n=>NULL POINTER RETURNED<=\n# But expected:\nlo"]
 
 @client.event
 async def on_message(message):
